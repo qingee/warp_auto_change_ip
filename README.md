@@ -1,24 +1,25 @@
-# warp_auto_change_ip
+warp_auto_change_ip
+描述
+这是warp的脚本。
 
-## Describtion
-This is a script for warp.
+您可以使用它来更改被 Netflix 阻止的 warp 的 IP。
 
-You can use it to change your IP of warp which was blocked by Netflix.
+更重要的是
+大部分代码来自lmc999的流媒体检测脚本，非常感谢！
 
-## What's more
-Most of the code comes from the streaming media detection script of lmc999, thank you very much!
+目前可以锁定区域（比如新加坡IP被锁定，IP分配给日本IP后会再次更改，直到IP为新加坡人）。
 
-At present, it is possible to lock the region (for example, if the Singapore IP is locked, the IP will be changed again after being assigned to the Japanese IP until the IP is Singaporean).
+修改完成后会继续监控（每隔10s，可以自行修改），也可以放到屏幕后台执行。
 
-After the changeing is completed, it will continue to monitor (every 10s, you can change it by yourself), and you can put it on the screen for background execution.
+如果需要一次性使用，将sleep 10改为break。
 
-If you need one-time use, change sleep 10 to break.
+你最好使用193的IPv4范围，这样可以更好的解锁流媒体，如果他不清楚，请使用我的脚本安装warp。
 
-You'd better use the range of IPv4 of 193, it can better unlock the streaming media, if he is not clear, please use my script to install warp.
+如何使用
 
 ## How to use
 ```bash
-wget https://github.com/luoxue-bot/warp_auto_change_ip/raw/main/warp_change_ip.sh && chmod +x warp_change_ip.sh && ./warp_change_ip.sh
+wget https://github.com/qingee/warp_auto_change_ip/raw/main/warp_change_ip.sh && chmod +x warp_change_ip.sh && ./warp_change_ip.sh
 ```
 
 PS：Will use the result of directly executing curl to Netflix as a benchmark.
